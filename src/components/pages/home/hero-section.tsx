@@ -1,6 +1,6 @@
 export default function HeroSection() {
     return (
-        <section className="{heroSection}">
+        <section id="hero" className="{heroSection} h-screen bg-[var(--color-primary)] flex items-center justify-center">
 
         </section>
     )
