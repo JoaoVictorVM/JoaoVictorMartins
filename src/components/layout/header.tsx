@@ -1,6 +1,5 @@
 "use client";
 import { use, useEffect, useState } from "react";
-import Squares from "./squares";
 
 export default function Header() {
 
@@ -35,7 +34,6 @@ export default function Header() {
                 <h1>LOGO</h1>
                 <h1>--</h1>
             </header>
-            <Squares colorClass={colors.square} />
         </>
   );
 }
