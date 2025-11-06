@@ -31,8 +31,8 @@ export default function Header() {
     return (
         <>
             <header className={`fixed top-0 left-0 w-full h-10 flex justify-between items-center px-8 z-50 transition-colors duration-100 ${colors.text}`}>
-                <h1>LOGO</h1>
-                <h1>--</h1>
+                <div>logo</div>
+                <div>--</div>
             </header>
         </>
   );
