@@ -8,13 +8,14 @@ interface SectionIndicatorsProps {
 }
 
 export default function SectionIndicators({ activeSection }: SectionIndicatorsProps) {
-  const sections = ["hero", "about"];
+  const sections = ["hero", "about", "more"];
   const smoothScrollTo = useSmoothScroll();
   const [isAnimating, setIsAnimating] = useState(false);
 
   const sectionColors: Record<string, string> = {
     hero: "#5C6E6E",
     about: "#333E50",
+    more: "#5C6E6E",
   };
 
   const handleClick = async (sectionId: string) => {
