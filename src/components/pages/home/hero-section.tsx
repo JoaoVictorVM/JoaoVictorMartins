@@ -2,7 +2,7 @@ export default function HeroSection() {
     return (
         <section id="hero" className="h-screen bg-[var(--color-primary)] flex items-center">
 
-            <div className="flex items-center justify-center m-60 gap-60">
+            <div className="w-screen flex items-center justify-center m-60 gap-60">
 
                 <div className="w-3/5 flex flex-col gap-6">
                     <h1 className="text-[var(--color-highlight)] text-7xl font-bold">Fullstack<br/>Developer<span className="text-[var(--color-light)]">.</span></h1>

@@ -7,6 +7,7 @@ import AboutSection from "@/components/pages/home/about-section";
 import ScrollManager from "@/components/hooks/scrollManager";
 import SectionIndicators from "@/components/layout/sectionIndicators";
 import MoreSection from "@/components/pages/home/more-section";
+import ProjectsSection from "@/components/pages/home/projects-section";
 
 export default function Home() {
     const [activeSection, setActiveSection] = useState("hero");
@@ -19,6 +20,7 @@ export default function Home() {
             <HeroSection />
             <AboutSection />
             <MoreSection />
+            <ProjectsSection />
 
         </main>
     )

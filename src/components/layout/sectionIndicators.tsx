@@ -8,7 +8,7 @@ interface SectionIndicatorsProps {
 }
 
 export default function SectionIndicators({ activeSection }: SectionIndicatorsProps) {
-  const sections = ["hero", "about", "more"];
+  const sections = ["hero", "about", "more", "projects"];
   const smoothScrollTo = useSmoothScroll();
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -16,6 +16,7 @@ export default function SectionIndicators({ activeSection }: SectionIndicatorsPr
     hero: "#5C6E6E",
     about: "#333E50",
     more: "#5C6E6E",
+    projects: "#333E50",
   };
 
   const handleClick = async (sectionId: string) => {

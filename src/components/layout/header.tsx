@@ -21,9 +21,11 @@ export default function Header() {
         return () => observer.disconnect();
     }, []);
 
-    const colorMap: Record<string, { text: string; square: string }> = {
-        hero: { text: "text-red-500", square: "bg-red-500" },
-        about: { text: "text-blue-500", square: "bg-blue-500" },
+    const colorMap: Record<string, { text: string; }> = {
+        hero: { text: "text-red-500" },
+        about: { text: "text-blue-500" },
+        more: { text: "text-green-500" },
+        projects: { text: "text-yellow-500" },
     };
 
     const colors = colorMap[activeSection] || colorMap.hero;

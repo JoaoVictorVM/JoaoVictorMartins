@@ -2,7 +2,7 @@ export default function AboutSection() {
     return (
         <section id="about" className="h-screen bg-[var(--color-light)] flex items-center">
 
-            <div className="flex items-center justify-center m-60">
+            <div className="flex items-center justify-center m-60 gap-60">
 
                 <div className="w-1/2 flex flex-col">
                     <img
