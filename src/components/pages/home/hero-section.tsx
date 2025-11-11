@@ -16,8 +16,8 @@ export default function HeroSection() {
                 <div className="w-2/5">
                     <img
                         src="/assets/svg/hero-section-animate.svg"
-                        alt="Hero Image"
-                        className="w-[500px] h-[500px] shadow-"
+                        alt=""
+                        className="w-[500px] h-[500px]"
                     />
                 </div>
 

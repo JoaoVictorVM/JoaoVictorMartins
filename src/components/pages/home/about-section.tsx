@@ -1,6 +1,6 @@
 export default function AboutSection() {
     return (
-        <section id="about" className="{aboutSection} h-screen bg-[var(--color-light)] flex items-center">
+        <section id="about" className="h-screen bg-[var(--color-light)] flex items-center">
 
             <div className="flex items-center justify-center m-60">
 
