@@ -17,6 +17,7 @@ export default function SectionIndicators({ activeSection }: SectionIndicatorsPr
     about: "#333E50",
     more: "#5C6E6E",
     projects: "#333E50",
+    showcase: "#333E50",
   };
 
   const handleClick = async (sectionId: string) => {

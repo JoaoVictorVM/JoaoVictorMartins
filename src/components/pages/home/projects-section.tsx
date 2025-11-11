@@ -1,5 +1,8 @@
+import ShowcaseProjects from "@/components/pages/home/showcaseProjects";
+
 export default function ProjectsSection() {
     return (
+        <>
         <section id="projects" className="h-screen bg-[var(--color-light)] flex items-center">
 
             <div className="flex items-center justify-center m-60">
@@ -15,10 +18,10 @@ export default function ProjectsSection() {
                     </div>
                 </div>
 
-                <div></div>
-
             </div>
-
+            
         </section>
+        <ShowcaseProjects />
+        </>
     )
 }
