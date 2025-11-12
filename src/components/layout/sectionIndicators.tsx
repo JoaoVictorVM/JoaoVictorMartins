@@ -37,7 +37,7 @@ export default function SectionIndicators({ activeSection }: SectionIndicatorsPr
   const currentColor = sectionColors[activeSection] || "#ffffff";
 
   return (
-    <div className="fixed right-8 top-1/2 -translate-y-1/2 flex flex-col gap-6 z-50">
+    <div className="fixed right-8 top-1/2 -translate-y-1/2 hidden md:flex flex-col gap-6 z-50">
       {sections.map((id) => {
         const isActive = activeSection === id;
 

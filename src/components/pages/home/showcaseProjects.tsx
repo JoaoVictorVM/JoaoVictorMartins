@@ -3,8 +3,7 @@ import ProjectsSlider from "@/components/hooks/projectsSlider";
 const projects = [
   {
     title: "Landing Page: Clair Obscur",
-    description:
-      "Landing page moderna com design minimalista e responsivo, feita com HTML, CSS e JS puro.",
+    description: "Landing page moderna com design minimalista e responsivo, feita com HTML, CSS e JS puro.",
     tec: ["HTML", "CSS", "JavaScript"],
     image: "/assets/images/Preview.png",
     link: "#",
@@ -12,8 +11,7 @@ const projects = [
   },
   {
     title: "Dashboard Financeiro",
-    description:
-      "Aplicação interativa para controle de despesas, com gráficos e relatórios em tempo real.",
+    description: "Aplicação interativa para controle de despesas, com gráficos e relatórios em tempo real.",
     tec: ["React", "TypeScript", "TailwindCSS"],
     image: "/assets/images/dashboard.png",
     link: "#",
@@ -21,8 +19,7 @@ const projects = [
   },
   {
     title: "Portfólio Pessoal",
-    description:
-      "Website pessoal para apresentar projetos e experiências, com animações suaves e design responsivo.",
+    description: "Website pessoal para apresentar projetos e experiências, com animações suaves e design responsivo.",
     tec: ["Next.js", "Framer Motion"],
     image: "/assets/images/Preview.png",
     link: "#",
@@ -30,8 +27,7 @@ const projects = [
   },
   {
     title: "E-commerce Minimalista",
-    description:
-      "Loja virtual elegante com carrinho funcional e integração com API de produtos.",
+    description: "Loja virtual elegante com carrinho funcional e integração com API de produtos.",
     tec: ["Next.js", "Stripe", "TailwindCSS"],
     image: "/assets/images/ecommerce.png",
     link: "#",
@@ -41,10 +37,10 @@ const projects = [
 
 export default function ShowcaseProjects() {
   return (
-    <section id="showcase" className="h-screen bg-[var(--color-light)] flex items-center">
-        <div className="w-screen m-60">
-            <ProjectsSlider projects={projects} />
-        </div>
+    <section id="showcase" className="min-h-screen bg-[var(--color-light)] flex items-center">
+      <div className="w-full m-6 lg:m-60">
+        <ProjectsSlider projects={projects} />
+      </div>
     </section>
   );
 }

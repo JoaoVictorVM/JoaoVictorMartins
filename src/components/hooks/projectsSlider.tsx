@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProjectCard from "@/components/ui/projectsCard";
 
@@ -19,12 +19,34 @@ interface ProjectsSliderProps {
 
 export default function ProjectsSlider({ projects }: ProjectsSliderProps) {
   const [page, setPage] = useState(0);
-  const projectsPerPage = 2;
-  const totalPages = Math.ceil(projects.length / projectsPerPage);
+  const [projectsPerPage, setProjectsPerPage] = useState(2);
 
+  useEffect(() => {
+    const updateProjectsPerPage = () => {
+      if (window.innerWidth < 768) {
+        setProjectsPerPage(1);
+      } else {
+        setProjectsPerPage(2);
+      }
+    };
+
+    updateProjectsPerPage();
+    window.addEventListener("resize", updateProjectsPerPage);
+    return () => window.removeEventListener("resize", updateProjectsPerPage);
+  }, []);
+
+  const totalPages = Math.ceil(projects.length / projectsPerPage);
   const start = page * projectsPerPage;
   const visibleProjects = projects.slice(start, start + projectsPerPage);
   const color = "var(--color-primary)";
+
+  const handleSwipe = (direction: "left" | "right") => {
+    if (direction === "left" && page < totalPages - 1) {
+      setPage(page + 1);
+    } else if (direction === "right" && page > 0) {
+      setPage(page - 1);
+    }
+  };
 
   return (
     <div className="w-full flex flex-col items-center">
@@ -36,7 +58,15 @@ export default function ProjectsSlider({ projects }: ProjectsSliderProps) {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -100, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch w-full"
+            className={`grid gap-6 items-stretch w-full ${
+              projectsPerPage === 2 ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"
+            }`}
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            onDragEnd={(e, { offset }) => {
+              if (offset.x < -50) handleSwipe("left");
+              if (offset.x > 50) handleSwipe("right");
+            }}
           >
             {visibleProjects.map((project, index) => (
               <div key={index} className="relative">
