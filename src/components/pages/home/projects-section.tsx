@@ -16,7 +16,7 @@ export default function ProjectsSection() {
 
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end mt-10 lg:mt-0">
 
-            <button className="text-[var(--color-primary)] text-lg sm:text-xl lg:text-2xl w-52 sm:w-60 lg:w-65 h-12 sm:h-14 border-2 border-[var(--color-primary)] rounded-xl transition-all duration-300 hover:bg-[var(--color-primary)] hover:text-[var(--color-light)]">Ver todos os projetos ➔</button>
+            <button className="text-[var(--color-primary)] font-bold text-sm sm:text-sm lg:text-sm w-52 sm:w-60 lg:w-72 h-12 sm:h-16 border-1 border-[var(--color-primary)] transition-all duration-300 hover:bg-[var(--color-primary)] hover:text-[var(--color-light)]">VER TODOS OS PROJETOS ➔</button>
 
           </div>
 
