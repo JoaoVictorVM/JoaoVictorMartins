@@ -9,7 +9,7 @@ export default function AboutSection() {
           <img
             src="/assets/images/Perfil.jpg"
             alt="João Victor Martins"
-            className="w-[200px] sm:w-[250px] md:w-[280px] lg:w-[300px] h-[200px] sm:h-[250px] md:h-[280px] lg:h-[300px] shadow-[0_0_10px_2px_#333E50]"
+            className="w-[200px] sm:w-[250px] md:w-[280px] lg:w-[300px] h-[200px] sm:h-[250px] md:h-[280px] lg:h-[300px] shadow-[0_0_10px_2px_#1A1F23]"
           />
 
         </div>

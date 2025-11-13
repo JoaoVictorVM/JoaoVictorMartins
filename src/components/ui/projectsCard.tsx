@@ -19,7 +19,7 @@ export default function ProjectCard({ title, description, tec, image, link, link
       <h1 className="text-xl sm:text-2xl font-bold text-[var(--color-primary)] mb-2">{title}</h1>
       <p className="text-[var(--color-primary)] text-sm sm:text-base mb-2">{description}</p>
 
-      <div className="text-sm text-[var(--color-highlight)] mb-4">{tec.join(" | ")}</div>
+      <div className="text-sm font-extralight tracking-wide text-[var(--color-primary)] mb-4">{tec.join(" | ")}</div>
 
       <div className="flex flex-wrap gap-4">
         <a href={link} target="_blank" className="border border-[var(--color-primary)] text-[var(--color-primary)] px-4 py-2 text-sm hover:bg-[var(--color-primary)] hover:text-white transition">Ver Projeto</a>

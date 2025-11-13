@@ -1,41 +1,74 @@
 "use client";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Header() {
+  const [activeSection, setActiveSection] = useState("hero");
 
-    const [activeSection, setActiveSection] = useState("hero");
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
 
-    useEffect(() => {
-        const sections = document.querySelectorAll("section");
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setActiveSection(entry.target.id);
-                    }
-                });
-            },
-            { threshold: 0.6 }
-        );
-        sections.forEach((section) => observer.observe(section));
-        return () => observer.disconnect();
-    }, []);
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
 
-    const colorMap: Record<string, { text: string; }> = {
-        hero: { text: "text-red-500" },
-        about: { text: "text-blue-500" },
-        more: { text: "text-green-500" },
-        projects: { text: "text-yellow-500" },
-    };
+  const styleMap: Record<
+    string,
+    { text: string; logo: string }
+  > = {
+    hero: {
+      text: "text-[#B08035]",
+      logo: "/assets/svg/logo-highlight.svg",
+    },
+    about: {
+      text: "text-[#1A1F23]",
+      logo: "/assets/svg/logo-primary.svg",
+    },
+    more: {
+      text: "text-[#B08035]",
+      logo: "/assets/svg/logo-highlight.svg",
+    },
+    projects: {
+      text: "text-[#1A1F23]",
+      logo: "/assets/svg/logo-primary.svg",
+    },
+    showcase: {
+      text: "text-[#1A1F23]",
+      logo: "/assets/svg/logo-primary.svg",
+    },
+  };
 
-    const colors = colorMap[activeSection] || colorMap.hero;
+  const currentStyle = styleMap[activeSection] || styleMap.hero;
 
-    return (
-        <>
-            <header className={`fixed top-0 left-0 w-full h-10 flex justify-between items-center px-8 z-50 transition-colors duration-100 ${colors.text}`}>
-                <div>logo</div>
-                <div>--</div>
-            </header>
-        </>
+  return (
+    <header className={`fixed top-0 left-0 w-full h-14 flex justify-between items-center z-50 transition-colors duration-300 ${currentStyle.text}`}>
+
+        <div className="flex items-center justify-between w-full m-8 mt-22">
+            
+            <Image
+                key={currentStyle.logo}
+                src={currentStyle.logo}
+                alt="Logo"
+                width={100}
+                height={40}
+                className="transition-opacity duration-500 opacity-100"
+            />
+            <div>--</div>
+
+        </div>
+
+
+
+    </header>
   );
 }

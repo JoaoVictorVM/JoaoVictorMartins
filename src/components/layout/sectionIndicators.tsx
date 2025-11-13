@@ -13,12 +13,12 @@ export default function SectionIndicators({ activeSection }: SectionIndicatorsPr
   const [isAnimating, setIsAnimating] = useState(false);
 
   const sectionColors: Record<string, string> = {
-    hero: "#5C6E6E",
-    about: "#333E50",
-    more: "#5C6E6E",
-    projects: "#333E50",
-    showcase: "#333E50",
-    footer: "#5C6E6E",
+    hero: "#B08035",
+    about: "#1A1F23",
+    more: "#B08035",
+    projects: "#1A1F23",
+    showcase: "#1A1F23",
+    footer: "#B08035",
   };
 
   const handleClick = async (sectionId: string) => {
