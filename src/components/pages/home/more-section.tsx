@@ -18,6 +18,7 @@ export default function MoreSection() {
             <img 
                 src="/assets/svg/more-section-animate.svg" 
                 alt="" 
+                draggable={false}
                 className="w-[250px] sm:w-[350px] md:w-[400px] lg:w-[500px] h-auto" 
             />
 

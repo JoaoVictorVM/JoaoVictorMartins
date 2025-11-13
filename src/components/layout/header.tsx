@@ -59,8 +59,9 @@ export default function Header() {
                 key={currentStyle.logo}
                 src={currentStyle.logo}
                 alt="Logo"
-                width={100}
-                height={40}
+                draggable={false}
+                width={80}
+                height={10}
                 className="transition-opacity duration-500 opacity-100"
             />
             <div>--</div>

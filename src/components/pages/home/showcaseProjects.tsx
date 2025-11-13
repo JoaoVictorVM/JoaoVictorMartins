@@ -2,20 +2,20 @@ import ProjectsSlider from "@/components/hooks/projectsSlider";
 
 const projects = [
   {
-    title: "Landing Page: Clair Obscur",
-    description: "Landing page moderna com design minimalista e responsivo, feita com HTML, CSS e JS puro.",
+    title: "Clair Obscur: Expedition 33",
+    description: "Landing page temática inspirada em Clair Obscur, desenvolvida apenas com HTML, CSS e JavaScript puro, focada em aprimorar minha organização e estruturação de projetos.",
     tec: ["HTML", "CSS", "JavaScript"],
-    image: "/assets/images/Preview.png",
+    image: "/assets/images/previewClair.png",
     link: "#",
-    linkRep: "#",
+    linkRep: "https://github.com/JoaoVictorVM/LP-Expedition33",
   },
   {
-    title: "Dashboard Financeiro",
-    description: "Aplicação interativa para controle de despesas, com gráficos e relatórios em tempo real.",
-    tec: ["React", "TypeScript", "TailwindCSS"],
-    image: "/assets/images/dashboard.png",
+    title: "Justin Bieber - SWAG",
+    description: "Landing page criada para apresentar o álbum SWAG, desenvolvida com Next.js e estilizada com TailwindCSS para melhorar meu desenvolvimento com a ferramenta.",
+    tec: ["Next.js", "TypeScript", "TailwindCSS"],
+    image: "/assets/images/previewSwag.png",
     link: "#",
-    linkRep: "#",
+    linkRep: "https://github.com/JoaoVictorVM/SWAG",
   },
   {
     title: "Portfólio Pessoal",
