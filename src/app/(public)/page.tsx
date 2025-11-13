@@ -22,7 +22,7 @@ export default function Home() {
             <AboutSection />
             <MoreSection />
             <ProjectsSection />
-
+            <FooterSection />
 
         </main>
     )
